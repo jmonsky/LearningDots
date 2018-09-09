@@ -87,13 +87,13 @@ class Population(object):
             if self.winPerc > 10:
                 self.mutationRate -= 0.001
                 if self.mutationRate < 0:
-                    self.mutationRate = 0.0
+                    self.mutationRate = 0.0001
             if self.winPerc > 80:
                 self.randoPerc -= 0.01
                 if self.randoPerc < 0:
                     self.randoPerc = 0.0
-        if self.randoPerc > 0.75:
-            self.randoPerc = 0.75
+        if self.randoPerc > 0.30:
+            self.randoPerc = 0.30
 
 
         self.caclulateFitness()
